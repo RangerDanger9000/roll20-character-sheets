@@ -1918,7 +1918,136 @@
             <textarea name="attr_History-Gumshoe" rows="1" cols="5"></textarea><br>
         </p></div>
     </div>
+	
+	<div class="sheet-Hex" name="sheet-Hex">
 
+        <div class="sheet-Stats-Hex"><p align="center">
+            <b><i><span data-i18n="stats">Stats</span></i></b> &nbsp; <br>
+            <button type="roll" value="&{template:default} {{name=@{CharName} rolled with Charm}} {{Roll=[[2d6+@{Charm}+?{+/- forward?|0}]]}}" name="roll_Charm"></button> <span data-i18n="charm">Charm</span>:<input type="number" name="attr_Charm" min="-1" max="3" style="width: 50px"> &nbsp; 
+            <button type="roll" value="&{template:default} {{name=@{CharName} rolled with Cool}} {{Roll=[[2d6+@{Cool}+?{+/- forward?|0}]]}}" name="roll_Cool"></button> <span data-i18n="cool">Cool</span>:<input type="number" name="attr_Cool" min="-1" max="3" style="width: 50px"> &nbsp;
+            <button type="roll" value="&{template:default} {{name=@{CharName} rolled with Sharp}} {{Roll=[[2d6+@{Sharp}+?{+/- forward?|0}]]}}" name="roll_Sharp"></button> <span data-i18n="sharp">Sharp</span>:<input type="number" name="attr_Sharp" min="-1" max="3" style="width: 50px"> &nbsp;
+            <button type="roll" value="&{template:default} {{name=@{CharName} rolled with Tough}} {{Roll=[[2d6+@{Tough}+?{+/- forward?|0}]]}}" name="roll_Tough"></button> <span data-i18n="tough">Tough</span>:<input type="number" name="attr_Tough" min="-1" max="3" style="width: 50px"> &nbsp;
+            <button type="roll" value="&{template:default} {{name=@{CharName} rolled with Weird}} {{Roll=[[2d6+@{Weird}+?{+/- forward?|0}]]}}" name="roll_Weird"></button> <span data-i18n="weird">Weird</span>:<input type="number" name="attr_Weird" min="-1" max="3" style="width: 50px"> &nbsp;<br>     
+        </p></div>
+        <div class="sheet-Etc-Hex">
+            <div class='sheet-3colrow'>
+                <div class='sheet-col'>
+                    <div class="sheet-Luck-Hex"><b><i><span data-i18n="luck">Luck</span></i></b><br>
+                        <span data-i18n="luck-description">Mark <i>Luck</i> to change a roll to a 12 or to avoid all harm from an injury</span><br>
+                        <p align=center> <span data-i18n="okay">Okay</span> <input type="checkbox" class="sheet-Luck-Hex" name="attr_Luck-Hex1">
+                        <input type="checkbox" class="sheet-Luck-Hex" name="attr_Luck-Hex2">
+                        <input type="checkbox" class="sheet-Luck-Hex" name="attr_Luck-Hex3">
+                        <input type="checkbox" class="sheet-Luck-Hex" name="attr_Luck-Hex4">
+                        <input type="checkbox" class="sheet-Luck-Hex" name="attr_Luck-Hex5">
+                        <input type="checkbox" class="sheet-Luck-Hex" name="attr_Luck-Hex6">
+                        <input type="checkbox" class="sheet-Luck-Hex" name="attr_Luck-Hex7"> <span data-i18n="doomed">Doomed</span><br></p>
+                        <i><span data-i18n="special">Special</span>:</i> <span data-i18n="luck-special-hex">When you spend <i>Luck</i> the Keeper will bring your fate into play</span>
+                        </div><br>
+                        <div class="sheet-Harm-Hex"><b><i><span data-i18n="harm">Harm</span></i></b><br>
+                        <p align=center> <span data-i18n="okay">Okay</span> <input type="checkbox" class="sheet-Harm-Hex" name="attr_Harm-Hex1">
+                        <input type="checkbox" class="sheet-Harm-Hex" name="attr_Harm-Hex2">
+                        <input type="checkbox" class="sheet-Harm-Hex" name="attr_Harm-Hex3"> &#x1F577;
+                        <input type="checkbox" class="sheet-Harm-Hex" name="attr_Harm-Hex4">
+                        <input type="checkbox" class="sheet-Harm-Hex" name="attr_Harm-Hex5">
+                        <input type="checkbox" class="sheet-Harm-Hex" name="attr_Harm-Hex6">
+                        <input type="checkbox" class="sheet-Harm-Hex" name="attr_Harm-Hex7"> <span data-i18n="dying">Dying</span><br></p>
+                        <span data-i18n="unstable">Unstable</span>: <input type="checkbox" class="sheet-Harm-Hex" name="attr_Unstable-Hex">
+                        </div><br>
+                        <div class="sheet-XP-Hex"><b><i><span data-i18n="experience">Experience</span></i></b><br>
+                        <span data-i18n="experience-description">Mark <i>Experience</i> when a roll totals 6 or less; or when a move tells you to do so</span><br>
+                        <p align=center> &nbsp; <input type="checkbox" class="sheet-XP-Hex" name="attr_XP-Hex1">
+                        <input type="checkbox" class="sheet-XP-Hex" name="attr_XP-Hex2">
+                        <input type="checkbox" class="sheet-XP-Hex" name="attr_XP-Hex3">
+                        <input type="checkbox" class="sheet-XP-Hex" name="attr_XP-Hex4">
+                        <input type="checkbox" class="sheet-XP-Hex" name="attr_XP-Hex5"></p>
+                        <span data-i18n="xp-description">Once you have filled all 5 boxes, uncheck them and choose an <i>Improvement</i> option</span>
+                    </div><br>
+                   <div class="sheet-Rotes-Hex"><b><i><span data-i18n="rotes">Rotes</span></i></b><br>
+                   <span data-i18n="fate-description">Whenever you <b>use magic</b>, you can decide afterwards that a particular spell is a <b>rote</b> that you know.</span>:
+                    <p align=center><input type="checkbox" class="sheet-Rote-Hex" name="attr_Rote-Hex1"> <span data-i18n="rote1">Rote:</span>
+					<input type="checkbox" class=
+                    <span data-i18n="fate-unfold">How your fate will unfold</span>: <br>
+                    <span data-i18n="heroic">Heroic</span>: <i>(<span data-i18n="pick-two">pick two</span>)</i>
+                    <p align=center><input type="checkbox" class="sheet-Fate-Hex" name="attr_Fate-Hex1"> <span data-i18n="fate-heroic1">Sacrifice</span> 
+                    <input type="checkbox" class="sheet-Fate-Hex" name="attr_Fate-Hex2"> <span data-i18n="fate-heroic2">You are the Champion</span> 
+                    <input type="checkbox" class="sheet-Fate-Hex" name="attr_Fate-Hex3"> <span data-i18n="fate-heroic3">Visions</span> 
+                    <input type="checkbox" class="sheet-Fate-Hex" name="attr_Fate-Hex4"> <span data-i18n="fate-heroic4">Secret Training</span> 
+                    <input type="checkbox" class="sheet-Fate-Hex" name="attr_Fate-Hex5"> <span data-i18n="fate-heroic5">True Love</span> 
+                    <input type="checkbox" class="sheet-Fate-Hex" name="attr_Fate-Hex6"> <span data-i18n="fate-heroic6">Magical Powers</span> 
+                    <input type="checkbox" class="sheet-Fate-Hex" name="attr_Fate-Hex7"> <span data-i18n="fate-heroic7">Mystical Inheritance</span> 
+                    <input type="checkbox" class="sheet-Fate-Hex" name="attr_Fate-Hex8"> <span data-i18n="fate-heroic8">A Normal Life</span> 
+                    <input type="checkbox" class="sheet-Fate-Hex" name="attr_Fate-Hex9"> <span data-i18n="fate-heroic9">The End of Monsters</span> 
+                    <input type="checkbox" class="sheet-Fate-Hex" name="attr_Fate-Hex10"> <span data-i18n="fate-heroic10">Hidden Allies</span> 
+                    <input type="checkbox" class="sheet-Fate-Hex" name="attr_Fate-Hex11"> <span data-i18n="fate-heroic11">Divine Help</span> 
+                    <input type="checkbox" class="sheet-Fate-Hex" name="attr_Fate-Hex12"> <span data-i18n="fate-heroic12">You Can Save the World</span></p>
+                    <span data-i18n="doom">Doom</span>: <i>(<span data-i18n="pick-two">pick two</span>)</i>
+                    <p align=center><input type="checkbox" class="sheet-Fate-Hex" name="attr_Fate-Hex13"> <span data-i18n="fate-doom1">Death</span>
+                    <input type="checkbox" class="sheet-Fate-Hex" name="attr_Fate-Hex14"> <span data-i18n="fate-doom2">You Can't Save Everyone</span> 
+                    <input type="checkbox" class="sheet-Fate-Hex" name="attr_Fate-Hex15"> <span data-i18n="fate-doom3">Impossible Love</span> 
+                    <input type="checkbox" class="sheet-Fate-Hex" name="attr_Fate-Hex16"> <span data-i18n="fate-doom4">Failure</span> 
+                    <input type="checkbox" class="sheet-Fate-Hex" name="attr_Fate-Hex17"> <span data-i18n="fate-doom5">A Nemesis</span> 
+                    <input type="checkbox" class="sheet-Fate-Hex" name="attr_Fate-Hex18"> <span data-i18n="fate-doom6">No Normal Life</span> 
+                    <input type="checkbox" class="sheet-Fate-Hex" name="attr_Fate-Hex19"> <span data-i18n="fate-doom7">Doubt</span> 
+                    <input type="checkbox" class="sheet-Fate-Hex" name="attr_Fate-Hex20"> <span data-i18n="fate-doom8">Loss of Loved Ones</span> 
+                    <input type="checkbox" class="sheet-Fate-Hex" name="attr_Fate-Hex21"> <span data-i18n="fate-doom9">Treachery</span> 
+                    <input type="checkbox" class="sheet-Fate-Hex" name="attr_Fate-Hex22"> <span data-i18n="fate-doom10">Sympathy with the Enemy</span> 
+                    <input type="checkbox" class="sheet-Fate-Hex" name="attr_Fate-Hex23"> <span data-i18n="fate-doom11">Damnation</span> 
+                    <input type="checkbox" class="sheet-Fate-Hex" name="attr_Fate-Hex24"> <span data-i18n="fate-doom12">The End of Days</span> 
+                    <input type="checkbox" class="sheet-Fate-Hex" name="attr_Fate-Hex25"> <span data-i18n="fate-doom13">Hosts of Monsters</span> 
+                    <input type="checkbox" class="sheet-Fate-Hex" name="attr_Fate-Hex26"> <span data-i18n="fate-doom14">The Source of Evil</span></p>
+                    </div>
+                </div>
+                <div class="sheet-col">
+                    <b><i><span data-i18n="moves">Moves</span></i></b><br>
+                        <i><span data-i18n="2-fixed-moves">You get these 2</span>:</i><br>
+                        <div class="sheet-FixedMoves-Hex">
+                            <p><input type="checkbox" class="sheet-FixedMoves-Hex" name="attr_FixedMoves-Hex1" checked=true> <span data-i18n="hex-fixed1"><b>Destiny's Plaything</b> <i>At the beginning of each mystery,</i> roll +Weird to <i>see what is revealed about your immediate future.</i> On a 10+, the Keeper will reveal a useful detail about the coming mystery. On a 7-9, you get a vague hit about it. On a miss, something bad is going to happen to you,</span> </p>
+                            <p><input type="checkbox" class="sheet-FixedMoves-Hex" name="attr_FixedMoves-Hex2" checked=true> <span data-i18n="hex-fixed2"><b>I'm Here for a Reason</b> There's something you are destined to do. Work out the details with the Keeper, based on your fate. You cannot die until it come to pass. <i>If you die in play</i> you must spend a <i>Luck</i> point. You will then, somehow, recover or be returned to life. Once your task is done, or you have become <i>doomed,</i> all bets are off</span></p>
+                        </div>
+                        <div class="sheet-Moves-Hex">
+                            <i><span data-i18n="1-move">Then pick one of these</span>:</i><br>
+                            <p><input type="checkbox" class="sheet-Moves-Hex" name="attr_Moves-Hex1"> <span data-i18n="hex-move1"><b>The Big Entrance</b> When <i>you make a showy entrance into a dangerous situation.</i>Roll +Cool. 10+, everyone stops to watch and listen to you until you finish your opening speech. On 7-9, yuo pick one creature to stop, watch and listen until you finish talking. On a miss, you are marked the biggest threat by all enemies present</span> </p>
+                            <p><input type="checkbox" class="sheet-Moves-Hex" name="attr_Moves-Hex2"> <span data-i18n="hex-move2"><b>Devastating</b> When you <i>inflict harm,</i> you may inflict +1 harm</span> </p>
+                            <p><input type="checkbox" class="sheet-Moves-Hex" name="attr_Moves-Hex3"> <span data-i18n="hex-move3"><b>Dutiful</b> When your fate rears its ugly head, and <i>you act in accordance with any of your fate tags</i> then mark experience. If it's a heroic tag then take +1 forward</span> <br>
+                            <p><input type="checkbox" class="sheet-Moves-Hex" name="attr_Moves-Hex4"> <span data-i18n="hex-move4"><b>Invincible</b> You always count as having 2 armour, this doesn't stack with other protection</span> <br>
+                            <p><input type="checkbox" class="sheet-Moves-Hex" name="attr_Moves-Hex5"> <span data-i18n="hex-move5"><b>Resilience</b> You heal faster than normal people. Any time your harm gets healed, heal and extra point. Additionally, your wounds count as 1 harm less for the purpose of the Keeper's harm moves</span> </p>
+                        </div>
+                </div>
+                <div class="sheet-col">
+                    <div class="sheet-OtherMoves-Hex">
+                        <i><b><span data-i18n="other-moves">Other Moves</span></b></i><br>
+                        <fieldset class="repeating_OtherMoves">
+                        <textarea name="attr_OtherMoveDescrip" rows="8" cols="40"></textarea><br></fieldset>
+                    </div>
+                    <p><div class="sheet-Gear-Hex">
+                		<i><b><span data-i18n="gear">Gear</span></b></i><br>
+						&#x1F577; <input type="checkbox" class="sheet-Gear-SkinName" name="attr_Hex_gearchoice0"> <span data-i18n="hex-gear1">Protective gear worth 1 armour</span> <br> 
+						&nbsp;&nbsp;&nbsp; (<span data-i18n="optional">optional</span>) <br>
+						&#x1F577; <span data-i18n="hex-gear2">One Special Weapon</span>:<br>
+						<i><span data-i18n="form">Form</span> (<span data-i18n="choose">choose</span> <span data-i18n="one">one</span>)</i><br>
+						&nbsp; <input type="radio" class="sheet-Gear-Hex" name="attr_Hex_gearchoice" value="staff"> <span data-i18n="hex-gear3">Staff (1 harm, hand, close)</span> <br>
+						&nbsp; <input type="radio" class="sheet-Gear-Hex" name="attr_Hex_gearchoice" value="haft"> <span data-i18n="hex-gear4">Haft (2 harm, hand, heavy)</span> <br>
+						&nbsp; <input type="radio" class="sheet-Gear-Hex" name="attr_Hex_gearchoice" value="handle"> <span data-i18n="hex-gear5">Handle (1 harm, hand, balanced)</span> <br>
+						&nbsp; <input type="radio" class="sheet-Gear-Hex" name="attr_Hex_gearchoice" value="chain"> <span data-i18n="hex-gear6">Chain (1 harm, hand, area)</span> <br>
+						<i><span data-i18n="hex-gear7">Business End</span> (<span data-i18n="choose">choose</span> <span data-i18n="three">three</span>)</i><br>
+						&nbsp;  <input type="checkbox" class="sheet-Gear-Hex" name="attr_Hex_gearchoice1"> <span data-i18n="hex-gear8">Artifact (+magic)</span> <br>
+						&nbsp;  <input type="checkbox" class="sheet-Gear-Hex" name="attr_Hex_gearchoice2"> <span data-i18n="hex-gear9">Spikes (+1 harm, +messy)</span> <br>
+						&nbsp;  <input type="checkbox" class="sheet-Gear-Hex" name="attr_Hex_gearchoice3"> <span data-i18n="hex-gear10">Blade (+1 harm)</span> <br>
+						&nbsp;  <input type="checkbox" class="sheet-Gear-Hex" name="attr_Hex_gearchoice4"> <span data-i18n="hex-gear11">Heavy (+1 harm)</span> <br>
+						&nbsp;  <input type="checkbox" class="sheet-Gear-Hex" name="attr_Hex_gearchoice5"> <span data-i18n="hex-gear12">Long (+close)</span> <br>
+						&nbsp;  <input type="checkbox" class="sheet-Gear-Hex" name="attr_Hex_gearchoice6"> <span data-i18n="hex-gear13">Throwable (+close)</span> <br>
+						&nbsp;  <input type="checkbox" class="sheet-Gear-Hex" name="attr_Hex_gearchoice7"> <span data-i18n="hex-gear14">Chain (+area)</span> <br>
+						<i><span data-i18n="material">Material</span> (<span data-i18n="choose">choose</span> <span data-i18n="one">one</span>)</i>
+						<input type="text" name="attr_gear-hex" />
+					</div><br></p>
+					<div class="sheet-OtherGear-Hex">
+						<i><b><span data-i18n="other-gear">Other Gear</span></b></i><br>
+						<textarea name="attr_OtherGearDescrip" rows="8" cols="40"></textarea><br>
+					</div><br>
+                </div>
+            </div>
+        </div>
+	
     <div class="sheet-Custom" name="sheet-Custom">
         <div class="sheet-Stats-Custom"><p align="center">
             <b><i>Playbook Name:</i></b> <input type="text" name="attr_Name-Custom" /><br>
